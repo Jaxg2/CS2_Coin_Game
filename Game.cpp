@@ -2,9 +2,8 @@
 
 #include <iostream>
 using namespace std;
-
-
 /*
+
 void Game::printFlipResults()
 {
 

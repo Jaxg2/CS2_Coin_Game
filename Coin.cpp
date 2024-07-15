@@ -8,10 +8,36 @@ Coin::Coin() : centValue(0)
 	flip();
 }
 
+int Coin::getHead()
+{
+	return head;
+}
+int Coin::getTail()
+{
+	return tail;
+}
+
+void Coin::setHead()
+{
+	if (isHeads())
+	{
+		head++;
+	}
+
+}
+
+
+void Coin::setTail()
+{
+	if (!isHeads())
+	{
+		tail++;
+	}
+}
 
 void Coin::flip()
 {
-	int sideUp = rand() % 2 + 1;
+	 sideUp = rand() % 2 + 1;
 
 }
 
@@ -21,7 +47,7 @@ bool Coin::isHeads()
 	{
 		return true;
 	}
-	else
+	else if (sideUp == 2)
 	{
 		return false;
 	}
@@ -30,14 +56,20 @@ bool Coin::isHeads()
 
 void Coin::getSideUp()
 {
-	string side;
 
 	if (isHeads())
 	{
-		cout << "Heads";
+		cout << "Heads " << endl;
 	}
 	else
 	{
-		cout << "Tails";
+		cout << "Tails " << endl;
 	}
+
+}
+
+void Coin::printTotal()
+{
+	cout << "Total Heads: " << head << endl;
+	cout << "Total Tails: " << tail;
 }
