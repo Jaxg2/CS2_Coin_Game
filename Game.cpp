@@ -14,14 +14,22 @@ Game::Game()
 void Game::printFlipResults()
 {
 
+	for (Coin coin : coins)
+	{
+		coin.getSideUp();
+	}
 }
 
 void Game::FlipCoins()
 {
-
+	Coin coin;
+	for (int i = 0; i < 3; i++)
+	{
+		coin.flip();
+	}
 }
 
-Game::printScore()
+void Game::printScore()
 {
 
 }
@@ -35,13 +43,16 @@ int Game::getRounds()
 
 int Game::getScore()
 {
+	Coin coin;
 
+	int balance = 0;
+
+	for (int i = 0; i < 3; i++)
+	{
+		balance += coins[i].getcentValue();
+	}
 }
 
-Game::Game()
-{
-
-}
 
 void Game::playGame()
 {

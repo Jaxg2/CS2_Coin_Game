@@ -17,7 +17,7 @@ private:
 	int tail = 0;
 public:
 	Coin();
-	Coin(int value);
+	Coin(int centValue);
 	void flip();
 	bool isHeads();
 	void getSideUp();
@@ -26,6 +26,7 @@ public:
 	void setHead();
 	void setTail();
 	void printTotal();
+	int getcentValue() const;
 
 };
 

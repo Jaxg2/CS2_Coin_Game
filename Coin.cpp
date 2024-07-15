@@ -8,9 +8,9 @@ Coin::Coin() : centValue(0)
 	flip();
 }
 
-Coin::Coin(int value) : centValue(0)
+Coin::Coin(int centVal): centValue(centVal)
 {
-
+	
 }
 
 int Coin::getHead()
@@ -77,4 +77,9 @@ void Coin::printTotal()
 {
 	cout << "Total Heads: " << head << endl;
 	cout << "Total Tails: " << tail;
+}
+
+int Coin::getcentValue() const
+{
+	return centValue;
 }
