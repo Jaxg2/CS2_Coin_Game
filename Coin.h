@@ -17,6 +17,7 @@ private:
 	int tail = 0;
 public:
 	Coin();
+	Coin(int value);
 	void flip();
 	bool isHeads();
 	void getSideUp();

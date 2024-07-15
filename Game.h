@@ -9,7 +9,7 @@ using namespace std;
 class Game
 {
 private:
-	Coin coins[3];
+	Coin coins[3] = { Coin(25), Coin(10), Coin(5)};
 	int totalScore;
 	int rounds;
 	void printFlipResults();

@@ -1,11 +1,16 @@
 #include "Coin.h"
-
+#include "Game.h"
 #include <iostream>
 #include <ctime>
 
 Coin::Coin() : centValue(0)
 {	
 	flip();
+}
+
+Coin::Coin(int value) : centValue(0)
+{
+
 }
 
 int Coin::getHead()
